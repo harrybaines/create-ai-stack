@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, BookOpen, Check, Github, Sparkles } from "lucide-react";
+import { ArrowRight, BookOpen, Check, Github, Terminal } from "lucide-react";
 import CopyableCommand from "./copyable-command";
 
 export default function HeroSection() {
@@ -10,16 +10,17 @@ export default function HeroSection() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
         <div className="max-w-2xl">
           <motion.div
-            className="inline-flex items-center gap-2 bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium mb-8"
+            className="inline-flex items-center gap-2 border border-border bg-background/50 backdrop-blur-sm text-foreground px-4 py-2 rounded-full text-sm font-medium mb-6 hover:bg-background/80 transition-colors"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, ease: "easeOut" }}
           >
-            <Sparkles className="w-4 h-4" />
-            <span>AI-powered development</span>
+            <Terminal className="w-4 h-4" />
+            <span>New! CLI for Full-Stack AI</span>
+            <ArrowRight className="w-4 h-4" />
           </motion.div>
           <motion.h1
-            className="text-6xl lg:text-8xl font-bold tracking-tight text-foreground mb-8 leading-[1.1]"
+            className="text-6xl lg:text-8xl font-bold tracking-tight text-foreground mb-6"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
@@ -27,7 +28,7 @@ export default function HeroSection() {
             Complete AI Stack in Seconds
           </motion.h1>
           <motion.p
-            className="text-lg lg:text-xl text-muted-foreground mb-12 leading-relaxed"
+            className="text-lg lg:text-xl text-muted-foreground mb-8 leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.2, ease: "easeOut" }}

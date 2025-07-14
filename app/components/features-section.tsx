@@ -30,7 +30,7 @@ export default function FeaturesSection() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
       >
-        <h2 className="text-3xl lg:text-4xl font-bold tracking-tight text-foreground mb-4">
+        <h2 className="text-3xl lg:text-5xl font-bold tracking-tight text-foreground mb-4">
           What you can build
         </h2>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">

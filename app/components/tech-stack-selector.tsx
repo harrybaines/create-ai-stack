@@ -83,11 +83,8 @@ export default function TechStackSelector() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
       >
-        <h2 className="text-3xl font-bold tracking-tight text-foreground mb-4">
-          Choose your{" "}
-          <span className="bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
-            tech stack
-          </span>
+        <h2 className="text-5xl font-bold tracking-tight text-foreground mb-4">
+          Choose your tech stack
         </h2>
         <p className="text-muted-foreground max-w-2xl mx-auto">
           Select the technologies you want to include in your AI application.

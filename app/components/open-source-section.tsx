@@ -12,11 +12,8 @@ export default function OpenSourceSection() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
       >
-        <h2 className="text-3xl lg:text-4xl font-bold tracking-tight text-foreground mb-6">
-          Built in the{" "}
-          <span className="bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
-            open
-          </span>
+        <h2 className="text-3xl lg:text-5xl font-bold tracking-tight text-foreground mb-6">
+          Built in the open
         </h2>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-6">
           Fully open source and community-driven. Contribute, customize, and make it your own.
