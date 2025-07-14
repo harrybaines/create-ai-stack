@@ -1,4 +1,5 @@
-import Image from "next/image"
+import { config } from "@/lib/config";
+import Image from "next/image";
 
 export default function Navbar() {
   return (
@@ -16,7 +17,7 @@ export default function Navbar() {
             <a href="#examples" className="text-muted-foreground hover:text-foreground transition-colors">
               Examples
             </a>
-            <a href="https:" className="text-muted-foreground hover:text-foreground transition-colors">
+            <a href={config.github.url} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
               GitHub
             </a>
           </div>

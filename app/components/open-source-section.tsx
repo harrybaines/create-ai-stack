@@ -1,5 +1,6 @@
 "use client";
 
+import { config } from "@/lib/config";
 import { motion } from "framer-motion";
 import { Github } from "lucide-react";
 
@@ -25,10 +26,10 @@ export default function OpenSourceSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, delay: 0.2, ease: "easeOut" }}
         >
-          <button className="bg-primary text-primary-foreground px-6 py-3 rounded-full font-medium hover:bg-primary/90 transition-all duration-300 flex items-center gap-2 group mx-auto">
+          <a href={config.github.url} target="_blank" rel="noopener noreferrer" className="bg-primary text-primary-foreground px-6 py-3 rounded-full font-medium hover:bg-primary/90 transition-all duration-300 inline-flex items-center gap-2 group mx-auto">
             <Github className="w-4 h-4" />
             Star on GitHub
-          </button>
+          </a>
         </motion.div>
       </motion.div>
     </div>

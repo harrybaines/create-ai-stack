@@ -1,3 +1,4 @@
+import { config } from "@/lib/config";
 import { Github, Terminal, Twitter } from "lucide-react";
 
 export default function Footer() {
@@ -48,7 +49,7 @@ export default function Footer() {
           <div className="space-y-4">
             <h4 className="font-medium">Community</h4>
             <div className="flex gap-4">
-              <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
+              <a href={config.github.url} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
                 <Github className="w-5 h-5" />
               </a>
               <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">

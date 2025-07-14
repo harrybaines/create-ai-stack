@@ -92,61 +92,63 @@ export default function TechStackSelector() {
       </motion.div>
 
       <motion.div
-        className="space-y-10"
+        className="max-w-5xl mx-auto"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.4, delay: 0.2, ease: "easeOut" }}
       >
-        {techCategories.map((category, categoryIndex) => (
-          <motion.div
-            key={categoryIndex}
-            className="space-y-4"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 0.3 + categoryIndex * 0.1, ease: "easeOut" }}
-          >
-            <h3 className="text-xs font-mono font-medium text-muted-foreground/70 uppercase tracking-wider mb-4">
-              {category.name}
-            </h3>
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
-              {category.items.map((tech) => {
-                const isSelected = selectedTech.has(tech.id);
-                return (
-                  <button
-                    key={tech.id}
-                    onClick={() => toggleTech(tech.id)}
-                    className={`
+        <div className="grid grid-cols-1 lg:grid-cols-[100px_1fr] gap-x-8 gap-y-10">
+          {techCategories.map((category, categoryIndex) => (
+            <motion.div
+              key={categoryIndex}
+              className="contents"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 0.3 + categoryIndex * 0.1, ease: "easeOut" }}
+            >
+              <h3 className="text-xs font-mono font-medium text-muted-foreground/70 uppercase tracking-wider mb-4 lg:mb-0 lg:flex lg:items-center lg:h-full">
+                {category.name}
+              </h3>
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 mb-10 lg:mb-0">
+                {category.items.map((tech) => {
+                  const isSelected = selectedTech.has(tech.id);
+                  return (
+                    <button
+                      key={tech.id}
+                      onClick={() => toggleTech(tech.id)}
+                      className={`
                        group relative overflow-hidden bg-background border rounded-xl px-4 py-3.5 text-sm font-medium
                        transition-all duration-300 text-left shadow-sm hover:shadow-md
                        focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary/50
                        ${isSelected
-                        ? 'border-primary/40 bg-primary/5 text-primary shadow-md scale-[1.02]'
-                        : 'border-border/50 text-foreground hover:border-border hover:bg-card/50 hover:scale-[1.01]'
-                      }
+                          ? 'border-primary/40 bg-primary/5 text-primary shadow-md scale-[1.02]'
+                          : 'border-border/50 text-foreground hover:border-border hover:bg-card/50 hover:scale-[1.01]'
+                        }
                      `}
-                  >
-                    <div className="flex items-center justify-between relative z-10">
-                      <span className="truncate font-medium">{tech.name}</span>
-                      <div className={`
+                    >
+                      <div className="flex items-center justify-between relative z-10">
+                        <span className="truncate font-medium">{tech.name}</span>
+                        <div className={`
                         flex items-center justify-center w-5 h-5 rounded-full border-2 transition-all duration-200
                         ${isSelected
-                          ? 'border-primary bg-primary scale-100'
-                          : 'border-muted-foreground/30 group-hover:border-muted-foreground/50 scale-90'
-                        }
+                            ? 'border-primary bg-primary scale-100'
+                            : 'border-muted-foreground/30 group-hover:border-muted-foreground/50 scale-90'
+                          }
                       `}>
-                        {isSelected && (
-                          <Check className="w-3 h-3 text-primary-foreground" />
-                        )}
+                          {isSelected && (
+                            <Check className="w-3 h-3 text-primary-foreground" />
+                          )}
+                        </div>
                       </div>
-                    </div>
-                    {/* Subtle gradient overlay on hover */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  </button>
-                );
-              })}
-            </div>
-          </motion.div>
-        ))}
+                      {/* Subtle gradient overlay on hover */}
+                      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    </button>
+                  );
+                })}
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </motion.div>
 
       {selectedTech.size > 0 && (
