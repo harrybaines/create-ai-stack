@@ -30,42 +30,50 @@ export default function FeaturesSection() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
       >
-        <h2 className="text-3xl lg:text-5xl font-bold tracking-tight text-foreground mb-4">
+        <h2 className="text-3xl lg:text-5xl font-bold tracking-tight text-foreground mb-6">
           What you can build
         </h2>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-          Start with production-ready templates for the most common AI use cases
+          Start with production-ready templates for the most common AI use cases.
+          Save thousands of hours and convert your visitors into customers.
         </p>
       </motion.div>
 
-      <motion.div
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.4, delay: 0.2, ease: "easeOut" }}
-      >
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-8">
         {features.map((feature, index) => (
           <motion.div
             key={index}
-            className="group"
-            initial={{ opacity: 0, y: 20 }}
+            className="relative"
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 0.3 + index * 0.1, ease: "easeOut" }}
+            transition={{ duration: 0.5, delay: 0.2 + index * 0.1, ease: "easeOut" }}
           >
-            <div className="bg-card/40 backdrop-blur-sm border border-border/50 rounded-xl p-6 h-full hover:bg-card/60 hover:border-border/80 transition-all duration-300 hover:-translate-y-1">
-              <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-all duration-300">
-                <feature.icon className="w-5 h-5 text-primary" />
+            <div className="border border-border/60 rounded-2xl p-8 h-full">
+              <div className="mb-6">
+                <div className="w-10 h-10 bg-muted rounded-xl flex items-center justify-center mb-4">
+                  <feature.icon className="w-5 h-5 text-muted-foreground" />
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-3">
+                  {feature.title}
+                </h3>
+                <p className="text-muted-foreground leading-relaxed mb-6">
+                  {feature.description}
+                </p>
               </div>
-              <h3 className="text-lg font-semibold mb-3 text-foreground">
-                {feature.title}
-              </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                {feature.description}
-              </p>
+
+              {/* Placeholder gray boxes */}
+              <div className="space-y-3">
+                <div className="h-4 bg-muted/30 rounded-lg"></div>
+                <div className="h-4 bg-muted/30 rounded-lg w-4/5"></div>
+                <div className="flex gap-2">
+                  <div className="h-6 w-16 bg-muted/40 rounded"></div>
+                  <div className="h-6 w-16 bg-muted/40 rounded"></div>
+                </div>
+              </div>
             </div>
           </motion.div>
         ))}
-      </motion.div>
+      </div>
     </div>
   );
 }

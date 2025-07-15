@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Check, X } from "lucide-react";
+import { Check } from "lucide-react";
 import { useState } from "react";
 
 export default function TechStackSelector() {
@@ -106,10 +106,10 @@ export default function TechStackSelector() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.3 + categoryIndex * 0.1, ease: "easeOut" }}
             >
-              <h3 className="text-xs font-mono font-medium text-muted-foreground/70 uppercase tracking-wider mb-4 lg:mb-0 lg:flex lg:items-center lg:h-full">
+              <h3 className="text-xs font-mono font-medium text-muted-foreground/70 uppercase tracking-wider mb-4 lg:mb-0 lg:h-[3.5rem] lg:flex lg:items-center">
                 {category.name}
               </h3>
-              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 mb-10 lg:mb-0">
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 mb-10 lg:mb-0">
                 {category.items.map((tech) => {
                   const isSelected = selectedTech.has(tech.id);
                   return (
@@ -150,7 +150,7 @@ export default function TechStackSelector() {
           ))}
         </div>
       </motion.div>
-
+      {/*
       {selectedTech.size > 0 && (
         <motion.div
           className="mt-12"
@@ -199,7 +199,7 @@ export default function TechStackSelector() {
             </div>
           </div>
         </motion.div>
-      )}
+      )} */}
     </div>
   );
 }
