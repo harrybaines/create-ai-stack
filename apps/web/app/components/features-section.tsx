@@ -62,14 +62,14 @@ export default function FeaturesSection() {
               </div>
 
               {/* Placeholder gray boxes */}
-              <div className="space-y-3">
+              {/* <div className="space-y-3">
                 <div className="h-4 bg-muted/30 rounded-lg"></div>
                 <div className="h-4 bg-muted/30 rounded-lg w-4/5"></div>
                 <div className="flex gap-2">
                   <div className="h-6 w-16 bg-muted/40 rounded"></div>
                   <div className="h-6 w-16 bg-muted/40 rounded"></div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </motion.div>
         ))}
