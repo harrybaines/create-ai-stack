@@ -49,7 +49,7 @@ export default function FeaturesSection() {
             transition={{ duration: 0.5, delay: 0.2 + index * 0.1, ease: "easeOut" }}
           >
             <div className="border border-border/60 rounded-2xl p-8 h-full">
-              <div className="mb-6">
+              <div>
                 <div className="w-10 h-10 bg-muted rounded-xl flex items-center justify-center mb-4">
                   <feature.icon className="w-5 h-5 text-muted-foreground" />
                 </div>
