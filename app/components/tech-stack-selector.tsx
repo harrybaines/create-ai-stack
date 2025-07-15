@@ -67,13 +67,13 @@ export default function TechStackSelector() {
   ];
 
   // Get selected tech names for display
-  const selectedTechNames = Array.from(selectedTech).map(techId => {
-    for (const category of techCategories) {
-      const tech = category.items.find(item => item.id === techId);
-      if (tech) return tech.name;
-    }
-    return techId;
-  });
+  // const selectedTechNames = Array.from(selectedTech).map(techId => {
+  //   for (const category of techCategories) {
+  //     const tech = category.items.find(item => item.id === techId);
+  //     if (tech) return tech.name;
+  //   }
+  //   return techId;
+  // });
 
   return (
     <div className="relative max-w-6xl mx-auto px-6 py-20">
