@@ -22,46 +22,39 @@ export default function TechStackSelector() {
       name: "Frontend",
       items: [
         { id: "nextjs", name: "Next.js" },
-        { id: "typescript", name: "TypeScript" },
         { id: "tailwind", name: "Tailwind CSS" },
         { id: "framer", name: "Framer Motion" },
         { id: "reactquery", name: "React Query" },
-        { id: "vite", name: "Vite" }
       ]
     },
     {
       name: "Backend",
       items: [
-        { id: "nodejs", name: "Node.js" },
+        { id: "nextjs-api", name: "Next.js API Routes" },
         { id: "express", name: "Express.js" },
         { id: "fastapi", name: "FastAPI" },
         { id: "trpc", name: "tRPC" },
         { id: "supabase", name: "Supabase" },
-        { id: "prisma", name: "Prisma" }
       ]
     },
     {
       name: "Database",
       items: [
         { id: "postgresql", name: "PostgreSQL" },
+        { id: "prisma", name: "Prisma" },
+        { id: "drizzle", name: "Drizzle ORM" },
         { id: "redis", name: "Redis" },
-        { id: "planetscale", name: "PlanetScale" },
-        { id: "neon", name: "Neon" },
-        { id: "sqlite", name: "SQLite" },
-        { id: "drizzle", name: "Drizzle ORM" }
       ]
     },
     {
       name: "AI",
       items: [
+        { id: "vercelai", name: "Vercel AI SDK" },
         { id: "openai", name: "OpenAI" },
-        { id: "anthropic", name: "Anthropic" },
+        { id: "tambo", name: "Tambo" },
         { id: "langchain", name: "LangChain" },
         { id: "pinecone", name: "Pinecone" },
-        { id: "weaviate", name: "Weaviate" },
-        { id: "huggingface", name: "Hugging Face" },
         { id: "llamaindex", name: "LlamaIndex" },
-        { id: "vercelai", name: "Vercel AI SDK" }
       ]
     }
   ];
