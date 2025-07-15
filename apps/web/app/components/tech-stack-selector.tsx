@@ -85,7 +85,7 @@ export default function TechStackSelector() {
       </motion.div>
 
       <motion.div
-        className="max-w-5xl mx-auto"
+        className="max-w-6xl mx-auto"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.4, delay: 0.2, ease: "easeOut" }}

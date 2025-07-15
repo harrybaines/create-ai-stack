@@ -5,7 +5,6 @@ import { Figtree } from "next/font/google";
 import "./globals.css";
 
 const sansFont = Figtree({
-  variable: "--font-sans",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700", "800", "900"],
 });
@@ -22,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${sansFont.variable} font-[family-name:var(--font-sans)] antialiased`}>
+      <body className={`${sansFont.className} antialiased`}>
         <Navbar />
         {children}
         <Footer />
