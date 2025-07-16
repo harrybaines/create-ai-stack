@@ -1,5 +1,6 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Check, Copy, Terminal } from "lucide-react";
 import { useState } from "react";
@@ -19,7 +20,7 @@ export default function CopyableCommand({ command }: CopyableCommandProps) {
 
   return (
     <motion.div
-      className="bg-card/80 border border-border/60 rounded-xl p-6 space-y-4 shadow-sm"
+      className="bg-card/80 border border-border/40 rounded-xl p-6 space-y-4 shadow-sm"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, ease: "easeOut" }}
@@ -38,12 +39,9 @@ export default function CopyableCommand({ command }: CopyableCommandProps) {
           <span className="text-primary">$</span>
           <span className="text-foreground">{command}</span>
         </div>
-        <button
-          onClick={handleCopy}
-          className="opacity-100 transition-all duration-200 p-2 hover:bg-background/80 rounded-lg hover:scale-110"
-        >
+        <Button onClick={handleCopy} variant="outline" size="icon" className="size-8">
           {copied ? <Check className="w-4 h-4 text-green-500" /> : <Copy className="w-4 h-4" />}
-        </button>
+        </Button>
       </div>
     </motion.div>
   );

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Check } from "lucide-react";
+import { Check, Terminal } from "lucide-react";
 import { useState } from "react";
 
 export default function TechStackSelector() {
@@ -19,9 +19,15 @@ export default function TechStackSelector() {
 
   const techCategories = [
     {
+      name: "Template",
+      items: [
+        { id: "chat-starter", name: "Chat Starter"},
+        { id: "agent-starter", name: "AI Agent Starter"},
+      ]
+    },
+    {
       name: "Frontend",
       items: [
-        { id: "nextjs", name: "Next.js" },
         { id: "tailwind", name: "Tailwind CSS" },
         { id: "framer", name: "Framer Motion" },
         { id: "reactquery", name: "React Query" },
@@ -32,18 +38,16 @@ export default function TechStackSelector() {
       items: [
         { id: "nextjs-api", name: "Next.js API Routes" },
         { id: "express", name: "Express.js" },
-        { id: "fastapi", name: "FastAPI" },
         { id: "trpc", name: "tRPC" },
-        { id: "supabase", name: "Supabase" },
       ]
     },
     {
       name: "Database",
       items: [
         { id: "postgresql", name: "PostgreSQL" },
+        { id: "supabase", name: "Supabase" },
         { id: "prisma", name: "Prisma" },
         { id: "drizzle", name: "Drizzle ORM" },
-        { id: "redis", name: "Redis" },
       ]
     },
     {
@@ -56,7 +60,7 @@ export default function TechStackSelector() {
         { id: "pinecone", name: "Pinecone" },
         { id: "llamaindex", name: "LlamaIndex" },
       ]
-    }
+    },
   ];
 
   // Get selected tech names for display
@@ -76,11 +80,19 @@ export default function TechStackSelector() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
       >
+        <motion.div
+          className="inline-flex items-center gap-2 border border-border bg-background/50 backdrop-blur-sm text-foreground px-4 py-2 rounded-full text-sm font-medium mb-6 hover:bg-background/80 transition-colors"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
+        >
+          <span>Coming soon!</span>
+        </motion.div>
         <h2 className="text-5xl font-bold tracking-tight text-foreground mb-4">
-          Choose your tech stack
+          Choose your stack
         </h2>
         <p className="text-muted-foreground max-w-2xl mx-auto">
-          Select the technologies you want to include in your AI application.
+          Select the technologies you want to include in your Next.js AI application.
         </p>
       </motion.div>
 
@@ -111,10 +123,10 @@ export default function TechStackSelector() {
                       onClick={() => toggleTech(tech.id)}
                       className={`
                        group relative overflow-hidden bg-background border rounded-xl px-4 py-3.5 text-sm font-medium
-                       transition-all duration-300 text-left shadow-sm hover:shadow-md
+                       transition-all duration-300 text-left hover:shadow-xs
                        focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary/50
                        ${isSelected
-                          ? 'border-primary/40 bg-primary/5 text-primary shadow-md scale-[1.02]'
+                          ? 'border-primary/40 bg-primary/5 text-primary shadow-sm scale-[1.01]'
                           : 'border-border/50 text-foreground hover:border-border hover:bg-card/50 hover:scale-[1.01]'
                         }
                      `}

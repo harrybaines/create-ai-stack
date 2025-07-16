@@ -12,9 +12,6 @@ export default function Navbar() {
             <span className="font-normal text-lg">create-ai-stack</span>
           </Link>
           <div className="flex items-center gap-8">
-            <a href="#docs" className="text-muted-foreground hover:text-foreground transition-colors">
-              Docs
-            </a>
             <a href="#examples" className="text-muted-foreground hover:text-foreground transition-colors">
               Examples
             </a>

@@ -18,7 +18,7 @@ export default function FeaturesSection() {
     {
       icon: Zap,
       title: "Full-Stack Apps",
-      description: "Complete web applications with React, Next.js, database integration, and deployment configs."
+      description: "Complete web applications with AI integration, databases, and deployment configs."
     },
   ];
 
@@ -50,8 +50,8 @@ export default function FeaturesSection() {
           >
             <div className="border border-border/60 rounded-2xl p-8 h-full">
               <div>
-                <div className="w-10 h-10 bg-muted rounded-xl flex items-center justify-center mb-4">
-                  <feature.icon className="w-5 h-5 text-muted-foreground" />
+                <div className="w-10 h-10 bg-muted rounded-xl flex items-center justify-center mb-5">
+                  <feature.icon className="w-4 h-4 text-muted-foreground" />
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-3">
                   {feature.title}

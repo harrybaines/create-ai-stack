@@ -1,8 +1,10 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
 import { config } from "@/lib/config";
 import { motion } from "framer-motion";
 import { Github } from "lucide-react";
+import Link from "next/link";
 
 export default function OpenSourceSection() {
   return (
@@ -18,7 +20,7 @@ export default function OpenSourceSection() {
         </h2>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-6">
           Fully open source and community-driven. Contribute, customize, and make it your own.
-          Join developers worldwide building the future of AI tooling together.
+          Join us to build the future of AI tooling together!
         </p>
 
         <motion.div
@@ -26,10 +28,12 @@ export default function OpenSourceSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, delay: 0.2, ease: "easeOut" }}
         >
-          <a href={config.github.url} target="_blank" rel="noopener noreferrer" className="bg-primary text-primary-foreground px-6 py-3 rounded-full font-medium hover:bg-primary/90 transition-all duration-300 inline-flex items-center gap-2 group mx-auto">
-            <Github className="w-4 h-4" />
-            Star on GitHub
-          </a>
+          <Button asChild size={'lg'}>
+            <Link href={config.github.url} target="_blank">
+              <Github className="w-4 h-4" />
+              Star on GitHub
+            </Link>
+          </Button>
         </motion.div>
       </motion.div>
     </div>

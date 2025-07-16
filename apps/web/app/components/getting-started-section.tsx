@@ -26,7 +26,7 @@ export default function GettingStartedSection() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
       >
-        <div className="bg-card/80 border border-border/60 rounded-xl p-8 shadow-sm">
+        <div className="bg-card/80 border border-border/60 rounded-xl p-8 shadow-xs">
           <div className="space-y-4">
             <div className="flex items-center gap-3 text-sm text-muted-foreground mb-6">
               <div className="flex gap-2">
